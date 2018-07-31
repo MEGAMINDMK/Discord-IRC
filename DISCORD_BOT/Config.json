@@ -1,0 +1,44 @@
+[
+ // Bot 2 (advanced options): 
+  {
+    "nickname": "DISCORD", // irc nick
+    "server": "irc.liberty-unleashed.co.uk", //irc channel server
+    "discordToken": "     ", // Bot token from discord
+    "autoSendCommands": [ // Commands that will be sent on connect
+      ["PRIVMSG", "NickServ", "IDENTIFY putbotpasswordhere"], // 3rd is password from irc
+      ["MODE", "DISCORD", "+x"], // 2nd argument is the name of nick on irc channel from irc
+      ["AUTH", "DISCORD", "123@asd"]// 2nd argument is the name of nick on irc channel & 3rd is password from irc
+    ],
+    "channelMapping": { // Maps each Discord-channel to an IRC-channel, used to direct messages to the correct place
+      "discord channel id": "#irc channel" // Use a discord channel ID instead of its name (so you can rename it or to disambiguate)
+	  //first is channel id from discord while 2nd is channel id from irc
+    },
+    "ircOptions": { // Optional node-irc options
+      "floodProtection": false, // On by default
+      "floodProtectionDelay": 1000 // 500 by default
+    },
+    "format": { // Optional custom formatting options
+      // Patterns, represented by {$patternName}, are replaced when sending messages
+      "commandPrelude": "Command sent by {$nickname}", // Message sent before a command
+      "ircText": "<{$displayUsername}> {$text}", // When sending a message to IRC
+      "urlAttachment": "<{$displayUsername}> {$attachmentURL}", // When sending a Discord attachment to IRC
+      "discord": "**<{$author}>** {$withMentions}" // When sending a message to Discord
+      // Other patterns that can be used:
+      // {$discordChannel} (e.g. #general)
+      // {$ircChannel} (e.g. #irc)
+    },
+    "ircNickColor": false, // Gives usernames a color in IRC for better readability (on by default)
+    // Makes the bot hide the username prefix for messages that start
+    // with one of these characters (commands):
+    "commandCharacters": ["!", "."],
+    "ircStatusNotices": true, // Enables notifications in Discord when people join/part in the relevant IRC channel
+    "ignoreUsers": {
+      "irc": ["irc_nick1", "irc_nick2"], // Ignore specified IRC nicks and do not send their messages to Discord.
+      "discord": ["discord_nick1", "discord_nick2"] // Ignore specified Discord nicks and do not send their messages to IRC.
+    },
+    // List of webhooks per channel
+    "webhooks": {
+    "#discord-bot": "web hook"
+ }
+  }
+]
