@@ -5,7 +5,7 @@
 # Discord-IRC
 Discord bot which connects to irc and gaming servers connected to irc
 
-To make this bot work, do the followoing as i do
+To make this bot work, do the followoing as
 1. download and install node.js
 2. open node.js console
 3. The paath will be defined here something like "C:\Users\jhonpc"
