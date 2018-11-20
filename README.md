@@ -19,4 +19,3 @@ npm run build
 9. copy this repository to it https://github.com/MEGAMINDMK/Discord-IRC/tree/master/DISCORD_BOT
 10. Open config.json enter your discord and irc details as asked in config file
 11. now run Discord_bot.bat
-12. Dont touch the exe file its useless you can remove it or delete it
