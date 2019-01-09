@@ -20,4 +20,5 @@ npm run build
 10. Open config.json enter your discord and irc details as asked in config file
 11. now run Discord_bot.bat
 
-<center><h1><b>OR</b></h1></center>
+<h1><b>OR</b></h1>
+Click <a href="https://github.com/MEGAMINDMK/Discord-IRC/releases/download/v2.0/Discord.exe" style="text-decoration:none">Here</a> for auto install everything up..!
